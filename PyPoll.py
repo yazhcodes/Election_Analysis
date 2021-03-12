@@ -1,0 +1,58 @@
+# Data to be retrieved
+import csv
+import os
+election_data_path = os.path.join("Course Work","Election_Analysis","Resources","election_results.csv")
+election_report_path = os.path.join("Course Work","Election_Analysis","analysis","election_analysis.txt")
+
+candidates = ""
+winner = ""
+total_votes = 0
+candidate_votes = 0
+max_vote = 0
+candidate_list = []
+candidate_dict = {}
+
+#Analyze the Election Data
+with open(election_data_path,"r") as election_data:
+    election_data_reader = csv.reader(election_data)
+    header = next(election_data_reader)
+    for i in election_data_reader:
+        total_votes = total_votes + 1
+        curr_candidate = i[2]
+        if curr_candidate not in candidate_list:
+            candidate_list.append(curr_candidate)
+            candidate_dict[i[2]] = 1
+        else:
+             candidate_dict[i[2]] = candidate_dict[i[2]] + 1
+
+# Convert candidate list into string
+num = len(candidate_list)
+for i in range(num):
+    if i == 0:
+        candidates = candidate_list[i]
+    elif i != num-1:
+        candidates = candidates + ", " + candidate_list[i]
+    else:
+        candidates = candidates + " & " + candidate_list[i]
+
+#Find winner
+max_vote = max(candidate_dict.values())
+for i in candidate_dict.items():
+    if i[1] == max_vote:
+        winner = i[0]
+
+# Print results
+print("**********************")
+print(f"A total number of {total_votes} have been cast.")
+print(f"List of candidates : {candidates}")
+print("\nTotal number of votes for each candidate : ")
+for i in candidate_dict.items():
+    print(f"\t{i[0]} has received {i[1]} votes.")
+print(f"\nAnd the winner is {winner}..!!")
+print("**********************")
+
+#Record the Results
+# with open(election_report_path,"w") as election_report:
+#     election_report.write("Counties in the Election!\n")
+#     election_report.write("-------------------------\n")
+#     election_report.write("Arapahoe\nDenver\nJefferson")
