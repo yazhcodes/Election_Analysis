@@ -12,28 +12,27 @@ max_vote = 0
 candidate_list = []
 candidate_dict = {}
 
-#Analyze the Election Data
+# Retrieve data from file
 with open(election_data_path,"r") as election_data:
     election_data_reader = csv.reader(election_data)
     header = next(election_data_reader)
     for i in election_data_reader:
-        total_votes = total_votes + 1
+        total_votes += 1
         curr_candidate = i[2]
-        if curr_candidate not in candidate_list:
-            candidate_list.append(curr_candidate)
+        if curr_candidate not in candidate_dict:
             candidate_dict[i[2]] = 1
         else:
-             candidate_dict[i[2]] = candidate_dict[i[2]] + 1
+             candidate_dict[i[2]] += 1
 
 # Convert candidate list into string
-num = len(candidate_list)
+num = len(candidate_dict)
 for i in range(num):
     if i == 0:
-        candidates = candidate_list[i]
+        candidates = list(candidate_dict)[i]
     elif i != num-1:
-        candidates = candidates + ", " + candidate_list[i]
+        candidates = candidates + ", " + list(candidate_dict)[i]
     else:
-        candidates = candidates + " & " + candidate_list[i]
+        candidates = candidates + " & " + list(candidate_dict)[i]
 
 #Find winner
 max_vote = max(candidate_dict.values())
