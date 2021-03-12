@@ -33,16 +33,17 @@ max_vote = max(candidate_dict.values())
 for i in candidate_dict.items():
     if i[1] == max_vote:
         winner = i[0]
+        winning_vote_count = i[1]
+        winning_percentage = i[1]/total_votes*100
 
 # Print results
-print("**********************")
-print(f"A total number of {total_votes} have been cast.")
-print(f"List of candidates : {candidates}")
-print("\nTotal number of votes for each candidate : ")
 for i in candidate_dict.items():
-    print(f"\t{i[0]} has received {(i[1]/total_votes*100):.2f}% of votes.")
-print(f"\nClearly the winner is {winner}..!!")
-print("**********************")
+    print(f"{i[0]}: {(i[1]/total_votes*100):.1f}% ({i[1]})\n")
+print("------------------------")
+print(f"Winner: {winner}")
+print(f"Winning Vote Count: {winning_vote_count}")
+print(f"Winning Percentage: {winning_percentage:.1f}%")
+print("------------------------")
 
 #Record the Results
 # with open(election_report_path,"w") as election_report:
