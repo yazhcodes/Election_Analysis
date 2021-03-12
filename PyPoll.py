@@ -4,12 +4,7 @@ import os
 election_data_path = os.path.join("Course Work","Election_Analysis","Resources","election_results.csv")
 election_report_path = os.path.join("Course Work","Election_Analysis","analysis","election_analysis.txt")
 
-candidates = ""
-winner = ""
 total_votes = 0
-candidate_votes = 0
-max_vote = 0
-candidate_list = []
 candidate_dict = {}
 
 # Retrieve data from file
@@ -18,8 +13,7 @@ with open(election_data_path,"r") as election_data:
     header = next(election_data_reader)
     for i in election_data_reader:
         total_votes += 1
-        curr_candidate = i[2]
-        if curr_candidate not in candidate_dict:
+        if i[2] not in candidate_dict:
             candidate_dict[i[2]] = 1
         else:
              candidate_dict[i[2]] += 1
