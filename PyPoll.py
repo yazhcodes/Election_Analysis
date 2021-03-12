@@ -40,8 +40,8 @@ print(f"A total number of {total_votes} have been cast.")
 print(f"List of candidates : {candidates}")
 print("\nTotal number of votes for each candidate : ")
 for i in candidate_dict.items():
-    print(f"\t{i[0]} has received {i[1]} votes.")
-print(f"\nAnd the winner is {winner}..!!")
+    print(f"\t{i[0]} has received {(i[1]/total_votes*100):.2f}% of votes.")
+print(f"\nClearly the winner is {winner}..!!")
 print("**********************")
 
 #Record the Results
