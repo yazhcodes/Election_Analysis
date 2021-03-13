@@ -33,8 +33,4 @@
 `
 election_data_path = os.path.join("Course Work","Election_Analysis","Resources","election_results.csv")
 election_result_path = os.path.join("Course Work","Election_Analysis","Challenge","election_analysis.txt")
-<<<<<<< HEAD
 `
-=======
-`
->>>>>>> db9276c96569210eff3e5ec1b5dd08def7466e6a
