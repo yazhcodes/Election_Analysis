@@ -7,16 +7,22 @@
 
 * A total of **369,711** votes were cast in this congressional election.
 * The election was held in three counties  - Jefferson, Denver & Arapahoe. And here's a breakdown of the voters turnout in each of these counties.
-    Jefferson: 10.5% (38,855)
-    Denver: 82.8% (306,055)
-    Arapahoe: 6.7% (24,801)
+
+    | County     | Total Votes  | Percentage of Votes  |
+    | ---------- | -----------: | -------------------: |
+    | Jefferson  | 38,855       | 10.5%                |
+    | Denver     | 306,055      | 82.8%                |
+    | Arapahoe   | 24,801       | 6.7%                 |
+    
 * **Denver** had the largest votes turnout, accounting to a whopping 83% of the total votes! 
 * Three candidates, Charles Casper Stockham, Diana DeGette & Raymon Anthony Doane, ran in the election. The votes they received from all counties are:
-Candidate  | Total Votes | Percentage of Votes
-------------- | -------------
-Charles Casper Stockham  | 85,213 | 23.0%
-Diana DeGette | 272,892 | 73.8%
-Raymon Anthony Doane | 11,606 | 3.1%
+
+    | Candidate                | Total Votes  | Percentage of Votes  |
+    | ------------------------ | -----------: | -------------------: |
+    | Charles Casper Stockham  | 85,213       | 23.0%                |
+    | Diana DeGette            | 272,892      | 73.8%                |
+    | Raymon Anthony Doane     | 11,606       | 3.1%                 |
+
 * The clear winner of the election was **Diana DeGette** who led with _74%_ by receiving a total of _272,892_ votes from all three counties.
 
 ## Election-Audit Summary: 
