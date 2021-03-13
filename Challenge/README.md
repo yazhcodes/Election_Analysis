@@ -2,7 +2,7 @@
 
 ## Overview of Election Audit
 
-   A Colorado Board of Elections employee has sought out help in auditing the results of a recent local congressional election.
+   This report summarizes the election results of a recent local congressional election held by Colorado Board of Elections.
 
 ## Election-Audit Results
 
