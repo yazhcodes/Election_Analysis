@@ -21,7 +21,7 @@
     | Candidate                | Total Votes  | Percentage of Votes  |
     | ------------------------ | -----------: | -------------------: |
     | Charles Casper Stockham  | 85,213       | 23.0%                |
-    | **Diana DeGette **       | 272,892      | 73.8%                |
+    | Diana DeGette            | 272,892      | 73.8%                |
     | Raymon Anthony Doane     | 11,606       | 3.1%                 |
 
 * The clear winner of the election was **Diana DeGette** who led by a whopping 74%, receiving a total of 272,892 votes from all three counties.
