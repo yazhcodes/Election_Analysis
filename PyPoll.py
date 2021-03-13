@@ -1,4 +1,3 @@
-# Data to be retrieved
 import csv
 import os
 election_data_path = os.path.join("Course Work","Election_Analysis","Resources","election_results.csv")
@@ -6,6 +5,7 @@ election_report_path = os.path.join("Course Work","Election_Analysis","analysis"
 
 total_votes = 0
 candidate_dict = {}
+candidates_summary = ""
 
 # Retrieve data from file
 with open(election_data_path,"r") as election_data:
@@ -18,16 +18,6 @@ with open(election_data_path,"r") as election_data:
         else:
              candidate_dict[i[2]] += 1
 
-# Convert candidate list into string
-num = len(candidate_dict)
-for i in range(num):
-    if i == 0:
-        candidates = list(candidate_dict)[i]
-    elif i != num-1:
-        candidates = candidates + ", " + list(candidate_dict)[i]
-    else:
-        candidates = candidates + " & " + list(candidate_dict)[i]
-
 #Find winner
 max_vote = max(candidate_dict.values())
 for i in candidate_dict.items():
@@ -36,17 +26,30 @@ for i in candidate_dict.items():
         winning_vote_count = i[1]
         winning_percentage = i[1]/total_votes*100
 
-# Print results
+#Prepare summary
+overall_summary = (
+        f"\nElection Results\n"
+        f"-------------------------------------\n"
+        f"Total Votes:  {total_votes:,}\n"
+        f"-------------------------------------"
+        )
 for i in candidate_dict.items():
-    print(f"{i[0]}: {(i[1]/total_votes*100):.1f}% ({i[1]})\n")
-print("------------------------")
-print(f"Winner: {winner}")
-print(f"Winning Vote Count: {winning_vote_count}")
-print(f"Winning Percentage: {winning_percentage:.1f}%")
-print("------------------------")
+    if candidates_summary:
+        candidates_summary += "\n"
+    candidates_summary += (f"{i[0]}: {(i[1]/total_votes*100):.1f}% ({i[1]})")
+winning_summary = (
+        f"-------------------------------------\n"
+        f"Winner: {winner}\n"
+        f"Winning Vote Count: {winning_vote_count}\n"
+        f"Winning Percentage: {winning_percentage:.1f}%\n"
+        f"------------------------"
+        )
+
+# Print results
+print(overall_summary)
+print(candidates_summary)
+print(winning_summary)
 
 #Record the Results
-# with open(election_report_path,"w") as election_report:
-#     election_report.write("Counties in the Election!\n")
-#     election_report.write("-------------------------\n")
-#     election_report.write("Arapahoe\nDenver\nJefferson")
+with open(election_report_path,"w") as election_report:
+    election_report.write(f"{overall_summary}\n{candidates_summary}\n{winning_summary}")
