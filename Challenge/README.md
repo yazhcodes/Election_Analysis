@@ -1,43 +1,36 @@
 # Election_Analysis
 
 ## Overview of Election Audit
-    A Colorado Board of Elections employee has sought out help in auditing the results of a recent local congressional election.
 
-## Election-Audit Results: 
+   This report summarizes the election results of a recent local congressional election held by Colorado Board of Elections.
 
-* How many votes were cast in this congressional election?
-* Provide a breakdown of the number of votes and the percentage of total votes for each county in the precinct.
-* Which county had the largest number of votes?
-* Provide a breakdown of the number of votes and the percentage of the total votes each candidate received.
-* Which candidate won the election, what was their vote count, and what was their percentage of the total votes?
+## Election-Audit Results
 
-## Election-Audit Summary: 
-    In a summary statement, provide a business proposal to the election commission on how this script can be used—with some modifications—for any election. Give at least two examples of how this script can be modified to be used for other elections.
+* A total of **369,711** votes were cast in this congressional election.
+* The election was held in three counties  - Jefferson, Denver & Arapahoe. And here's a breakdown of the voters turnout in each of these counties.
 
-1. Calculate the total number of votes cast.
-2. Get a complete list of candidates who received votes.
-3. Calculate the total number of votes each candidate received.
-4. Calculate the percentage of votes each candidate won.
-5. Determine the winner of the election based on popular vote.
+    | County     | Total Votes  | Percentage of Votes  |
+    | ---------- | -----------: | -------------------: |
+    | Jefferson  | 38,855       | 10.5%                |
+    | Denver     | 306,055      | 82.8%                |
+    | Arapahoe   | 24,801       | 6.7%                 |
+    
+* **Denver** had the largest votes turnout, accounting to 83% of the total votes! 
+* Three candidates - Charles Casper Stockham, Diana DeGette & Raymon Anthony Doane, ran in the election. The votes they received from all the counties are:
 
-## Resources
-- Data Source: election_results.csv
-- Software: Python 2.7.16, Visual Studio Code 1.54.1
+    | Candidate                | Total Votes  | Percentage of Votes  |
+    | ------------------------ | -----------: | -------------------: |
+    | Charles Casper Stockham  | 85,213       | 23.0%                |
+    | Diana DeGette            | 272,892      | 73.8%                |
+    | Raymon Anthony Doane     | 11,606       | 3.1%                 |
 
-## Summary
-The analysis of the election shows that:
-- There were x votes cast in the election
-- The candidates were:
-    - Charles Casper Stockham
-    - Diana DeGette
-    - Raymon Anthony Doane
-- The candidate results were:
-    - Charles Casper Stockham received 23.0% of the votes and 85213 number of votes.
-    - Diana DeGette received 73.8% of the votes and 272892 number of votes.
-    - Raymon Anthony Doane received 3.1% of the votes and 11606 number of votes.
-- The winner of the election was:
-    - Diana DeGette, who received 73.8% of the votes and 272892 number of votes.
+* The winner of the election was **Diana DeGette** who led by a whopping 74%, receiving a total of 272,892 votes from all three counties.
 
-## Challenge Overview
+## Election-Audit Summary 
 
-## Challenge Summary
+   My Python code reads the voting data (369,711 records to be exact) from a .csv file and instantly provides the election results. Although it took me almost 5 hours to build the script from scratch, the good news is that this script can be reused for all upcoming elections that capture voting data in a similar format (i.e., Ballot ID, County, Candidate).  The script requires only two minor modifications where it points to the location of the data file and to that of the results file.
+
+`
+election_data_path = os.path.join("Course Work","Election_Analysis","Resources","election_results.csv")
+election_result_path = os.path.join("Course Work","Election_Analysis","Challenge","election_analysis.txt")
+`

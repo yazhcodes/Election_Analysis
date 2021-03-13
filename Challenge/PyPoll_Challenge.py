@@ -3,8 +3,8 @@ import csv
 import os
 
 # Add file path variables
-election_data_path = os.path.join("Course Work","Election_Analysis","Resources","election_results.csv")
-election_report_path = os.path.join("Course Work","Election_Analysis","Challenge","election_analysis.txt")
+election_data_path = os.path.join("Course Work","Election_Analysis","Challenge","election_results.csv")
+election_result_path = os.path.join("Course Work","Election_Analysis","Challenge","election_analysis.txt")
 
 # Initialize variables for analysis
 total_votes = 0
@@ -77,5 +77,5 @@ winning_summary = (
 print(f"{overall_summary}\n{county_summary}\n{largest_county_summary}\n{candidates_summary}\n{winning_summary}")
 
 #Record the Results
-with open(election_report_path,"w") as election_report:
-    election_report.write(f"{overall_summary}\n{county_summary}\n{largest_county_summary}\n{candidates_summary}\n{winning_summary}")
+with open(election_result_path,"w") as election_result:
+    election_result.write(f"{overall_summary}\n{county_summary}\n{largest_county_summary}\n{candidates_summary}\n{winning_summary}")
