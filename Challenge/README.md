@@ -16,7 +16,7 @@
     | Arapahoe   | 24,801       | 6.7%                 |
     
 * **Denver** had the largest votes turnout, accounting to 83% of the total votes! 
-* Three candidates, Charles Casper Stockham, Diana DeGette & Raymon Anthony Doane, ran in the election. The votes they received from all counties are:
+* Three candidates - Charles Casper Stockham, Diana DeGette & Raymon Anthony Doane, ran in the election. The votes they received from all the counties are:
 
     | Candidate                | Total Votes  | Percentage of Votes  |
     | ------------------------ | -----------: | -------------------: |
@@ -24,7 +24,7 @@
     | Diana DeGette            | 272,892      | 73.8%                |
     | Raymon Anthony Doane     | 11,606       | 3.1%                 |
 
-* The clear winner of the election was **Diana DeGette** who led by a whopping 74%, receiving a total of 272,892 votes from all three counties.
+* The winner of the election was **Diana DeGette** who led by a whopping 74%, receiving a total of 272,892 votes from all three counties.
 
 ## Election-Audit Summary 
 
