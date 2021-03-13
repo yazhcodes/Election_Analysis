@@ -4,7 +4,7 @@ import os
 
 # Add file path variables
 election_data_path = os.path.join("Course Work","Election_Analysis","Resources","election_results.csv")
-election_report_path = os.path.join("Challenge","election_analysis.txt")
+election_report_path = os.path.join("Course Work","Election_Analysis","Challenge","election_analysis.txt")
 
 # Initialize variables for analysis
 total_votes = 0
